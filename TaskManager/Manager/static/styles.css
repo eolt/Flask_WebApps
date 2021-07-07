@@ -1,0 +1,21 @@
+body {
+    background-color: #88B2CC;
+}
+
+nav {
+    background-color: #658EA9;
+}
+
+.nav-link {
+    color: white;
+    font-family: monospace;
+    font-size: 1.2em;
+}
+
+form {
+    color: white;
+}
+
+li {
+
+}

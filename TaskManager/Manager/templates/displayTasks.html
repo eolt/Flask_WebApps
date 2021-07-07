@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+<title>Task Page</title>
+{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <div class="container">
+<ul class="list-group">
+    {% for task in tasks %}
+    <li class="list-group-item list-group-item-dark list-group-item-action" style="border-color:{{ task.color }}; border-style: solid; border-width: thick; background-color:#E7D4C0">
+        <div class="d-flex w-100 justify-content-between" >
+            <h3 class="mb-1">{{ task.taskTitle }}</h3>
+            {% if isLater %}
+                <small>Due: {{ task.dueDate.strftime("%m/%d/%Y") }}</small>
+            {% else %}
+                <small>Due At: {{ task.dueTime.strftime("%I:%M") }} {{ 'AM' if task.dueTime.hour <= 12 else 'PM' }}</small>
+            {% endif %}
+        </div>
+        <p class="mb-1">{{ task.taskDescription }}</p>
+        {% if task.dueDate < currDay %}
+            <small>Overdue by {{ (currDay - task.dueDate).days  }} {{ 'day' if (currDay - task.dueDate).days == 1  else 'days' }}  </small>
+        {% elif task.dueDate > currDay %}
+            <small>Due in {{ (task.dueDate - currDay).days }} {{ 'day' if (task.dueDate - currDay).days == 1  else 'days' }} </small>
+        {% else %}
+            <small> Due today </small>
+        {% endif %}
+
+        <br>
+        <input type="submit" name="{{ task.id }}" value="Modify" class="btn btn-sm btn-info" style="color:white">
+        <input type="submit" name="{{ task.id }}" value="Delete" class="btn btn-sm btn-danger">
+    </li>
+    <br>
+    {% endfor %}
+</ul>
+    </div>
+</form>
+{% endblock %}

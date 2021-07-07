@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Create Task</title>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="container">
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <br>
+        <h1 class="h3 mb-3 font-weight-normal">
+            Modify Task
+        </h1>
+        <hr>
+        {{ form.taskTitle.label() }}
+        {{ form.taskTitle(class="form-control", placeholder=task.taskTitle, value=task.taskTitle) }}
+        {{ form.taskDescription.label() }}
+        {{ form.taskDescription(class="form-control", placeholder=task.taskDescription, value=task.taskDescription) }}
+        {{ form.dueDate.label() }}
+        {{ form.dueDate(type="date", value=task.dueDate) }}
+        {{ form.dueTime.label() }}
+        {{ form.dueTime(type="time", value=task.dueTime) }}
+        <br>
+        {{ form.color.label() }}
+        {{ form.color(type="color", class="form-control-color", value=task.color) }}
+        <br>
+        <br>
+        {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+    </form>
+</div>
+{% endblock %}
