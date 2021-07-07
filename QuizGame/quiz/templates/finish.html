@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Finish Page</title>
+{% endblock %}
+
+{% block statement %}
+    <h1>
+        Finished!
+    </h1>
+
+    <p>You have scored {{ score }}%</p>
+    <p>You can play again and receive a new random set of questions</p>
+    <br>
+{% endblock %}
+
+{% block response %}
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <a class="btn btn-lg" type="button" href="{{ url_for('index_page') }}">Return To Start</a>
+    </div>
+{% endblock %}

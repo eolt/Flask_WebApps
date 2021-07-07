@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>
+        Home Page
+    </title>
+{% endblock %}
+
+{% block statement %}
+    <h1>
+        Welcome!
+    </h1>
+
+    <p>
+        This quiz is designed to test your knowledge on random topics you probably wouldn't think too much about unless you were on a quiz show.
+
+        There are 5 random question on any subject from literature, movies, or history.
+        At the end you'll receive a score of how well you did on the quiz.
+    </p>
+
+    <br>
+
+{% endblock %}
+
+{% block response %}
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <a class="btn btn-lg" type="button" href="{{ url_for('question_page', score=0, it=0) }}">Let's Begin</a>
+    </div>
+{% endblock %}

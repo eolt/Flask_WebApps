@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title xmlns="http://www.w3.org/1999/html">Question Page</title>
+{% endblock %}
+
+{% block statement %}
+    <h1>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="bg"><h1>Question #{{ question_num }}</h1></div>
+                </div>
+                <div class="col">
+                    <div class="bg"></div>
+                </div>
+                <div class="col">
+                    <div class="bg"><h1>Score: {{ score }}</h1></div>
+                </div>
+            </div>
+        </div>
+    </h1>
+    <h2>{{ question }}</h2>
+    <br>
+{% endblock %}
+
+{% block response %}
+    <form method="POST">
+        <!-- Our maximum number of questions should be 3. If we get a case where we have less than 3
+            choices, then we must prevent an error of accessing more than the desired indices -->
+
+        <div class="container" style="margin-top:50px; margin-left:320px">
+            <div class="row">
+                {% if num_answers >= 1 %}
+                <div class="col">
+                    <input class="btn btn-lg btn-warning  {{ answers[0].correct }}" type="submit" name="{{ answers[0].correct }}" value="{{ answers[0].choice }} - {{ answers[0].text }}" id="choice1">
+                </div>
+                {% endif %}
+
+                {% if num_answers >= 2 %}
+                <div class="col" >
+                    <input class="btn btn-lg btn-warning { answers[1].correct }}" type="submit" name="{{ answers[1].correct }}" value="{{ answers[1].choice }} - {{ answers[1].text }}" id="choice2">
+                </div>
+                {% endif %}
+
+                {% if num_answers >= 3 %}
+                <div class="col">
+                    <input class="btn btn-lg btn-warning {{ answers[2].correct }}" type="submit" name="{{ answers[2].correct }}" value="{{ answers[2].choice }} - {{ answers[2].text }}" id="choice3">
+                </div>
+                <div class="col"></div>
+                {% endif %}
+            </div>
+        </div>
+
+        <br>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                        <span>{{ message }}</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </form>
+{% endblock %}
+
