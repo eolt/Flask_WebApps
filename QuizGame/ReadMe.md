@@ -13,6 +13,8 @@ The program implements several attributes to handle back-end and front-end aspec
 
 ![Alt text](https://github.com/eolt/Flask_WebApps/blob/10ddd4869777139017485cba9b0cdc5094e383cd/QuizGame/Screenshot%20Images/Question%20%231%20Page.png)
 
+Note: The flash alert happens after the user clicks on of the button. The message apears on the next page, as is the function of the flashing system. I added the option to close the message and made so it wasn't too distracting from the question being asked. 
+
 ![Alt text](https://github.com/eolt/Flask_WebApps/blob/10ddd4869777139017485cba9b0cdc5094e383cd/QuizGame/Screenshot%20Images/Question%20%232%20Page.png)
 
 ![Alt text](https://github.com/eolt/Flask_WebApps/blob/10ddd4869777139017485cba9b0cdc5094e383cd/QuizGame/Screenshot%20Images/Question%20%233%20Page.png)
