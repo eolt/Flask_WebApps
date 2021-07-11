@@ -25,5 +25,7 @@ Note: The flash alert happens after the user clicks on of the button. The messag
 
 ![Alt text](https://github.com/eolt/Flask_WebApps/blob/10ddd4869777139017485cba9b0cdc5094e383cd/QuizGame/Screenshot%20Images/Finish%20Page.png)
 
+Note: The flash alert does not appear for the last question as the game has finished and the next page lists the percentage correct anyway. Once the user clicks the button. The game repeats, but incentively a new set of random question will be asked. 
+
 
 
