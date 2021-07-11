@@ -32,9 +32,9 @@ def task_page(day):
         later = False
 
         if day == '0':
-            tasks = Task.query.filter(Task.dueDate <= date.today()).order_by(Task.dueDate)
+            tasks = Task.query.filter(Task.dueDate <= date.today()).order_by(Task.dueTime)
         elif day == '1':
-            tasks = Task.query.filter_by(dueDate=(date.today() + timedelta(days=1))).order_by(Task.dueDate)
+            tasks = Task.query.filter_by(dueDate=(date.today() + timedelta(days=1))).order_by(Task.dueTime)
         else:
             tasks = Task.query.filter(Task.dueDate > (date.today() + timedelta(days=1))).order_by(Task.dueDate)
             later = True
