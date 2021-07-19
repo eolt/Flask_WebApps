@@ -7,6 +7,6 @@ This program will use python request and Selenium to scrape and get problems and
 Currently this program can request api from LeetCode, store the problems lists depending on difficulty, and run Selenium to obtain the descriptions of each problem.
 
 ## TODOs
-- I plan to use a mailing api to send a random problem to someone by email at a daily or custom schedule.
+- I plan to use a mailing api to send a random problem by email at a daily or custom schedule.
 - The question will be properly formatted and designed for readability and responsiveness. 
 - Will implement Flask framwork to recieve user emails and create a login where users can customize type of problems and delivery schedule. 
