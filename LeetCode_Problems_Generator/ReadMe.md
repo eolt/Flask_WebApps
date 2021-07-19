@@ -9,3 +9,4 @@ Currently this program can request api from LeetCode, store the problems lists d
 ## TODOs
 - I plan to use a mailing api to send a random problem to someone by email at a daily or custom schedule.
 - The question will be properly formatted and designed for readability and responsiveness. 
+- Will implment Flask framwork to create forms to recieve user emails and create a login where users and customize type of problems and delivery schedule. 
