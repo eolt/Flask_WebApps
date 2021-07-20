@@ -11,5 +11,5 @@ There is currently and additional setup to run flask locally which generates a w
 ## TODOs
 - I plan to use a mailing api to send a random problem by email at a daily or custom schedule.
 - The question will be properly formatted and designed for readability and responsiveness. 
-- ~~Implement Flask framework to recieve user emails ~~
+- ~~Implement Flask framework to recieve user emails~~
 - Create a login where users can customize type of problems and delivery schedule. 
