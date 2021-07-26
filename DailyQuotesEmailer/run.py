@@ -1,5 +1,4 @@
-from Public import app
-from Public.routes import create_message
+from app import app
 
 
 if __name__ == '__main__':
