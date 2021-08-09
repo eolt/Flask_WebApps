@@ -8,7 +8,7 @@ APScheduler runs a background task to automate the email messaging. The task is 
 ```
 The hour relies on the localtime of the server which runs the program. I am running my program off [Heroku,](https://daily-stoicism-quotes.herokuapp.com) which is set to UTC time, so the hour is set to trigger at 7 A.M. Central Time (12 hours past). It can be updated to whichever over you would like or off the type of server used. 
 
-The process of sending the email is done using Python library smtplib. I created a gmail account as the default sender of the emails. The list of email recipients is gathered and Saved by GET & POST [Mailchimp API](https://mailchimp.com/developer/marketing/api/)  
+The process of sending the email is done using Python library smtplib. I created a gmail account as the default sender of the emails. The list of email recipients is gathered and saved by GET & POST [Mailchimp API](https://mailchimp.com/developer/marketing/api/)  
 
 
 ## Samples
